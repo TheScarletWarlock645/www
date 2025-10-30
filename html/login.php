@@ -11,10 +11,10 @@ if (isset($_POST['password'])) {
 include('../secrets/password.php');
 if ($password == $admin_password) {
     $_SESSION['logged_in'] = TRUE;
-    header("Location: http://100.119.133.29/entries.php");
+    header("Location: http://localhost/entries.php");
     exit();
 } else {
-    header("Location: http://100.119.133.29/login_page.php?error=1");
+    header("Location: http://localhost/login_page.php?error=1");
 }
 
 ?>
