@@ -9,7 +9,7 @@ session_start();
 
 // Redirect to login if user is not authenticated
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== TRUE) {
-    header("Location: http://100.119.133.29");
+    header("Location: http://localhost");
     exit;
 }
 
@@ -613,7 +613,7 @@ if (!$result) {
     <title>Gear Tracking System</title>
 </head>
 <body>
-    <nav><a href="http://100.119.133.29/">Logout</a></nav>
+    <nav><a href="http://localhost/">Logout</a></nav>
     <h1>Gear Tracking System</h1>
     <div class="whitelist_form">
         <h2>Whitelist controls</h2>
