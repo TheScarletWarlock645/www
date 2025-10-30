@@ -18,14 +18,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Check if student is whitelisted
     if (!in_array($stu_id, $amp_cert)) {
         mysqli_close($conn);
-        header("Location: http://100.119.133.29/index.php?whitelist");
+        header("Location: http://localhost/index.php?whitelist");
         exit();
     }
 
     // Validate that status is one of the expected table names
     if ($status !== 'gear_checkout' && $status !== 'gear_return') {
         mysqli_close($conn);
-        header("Location: http://100.119.133.29/index.php?error=invalid_status");
+        header("Location: http://localhost/index.php?error=invalid_status");
         exit();
     }
 
@@ -34,11 +34,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $sql_result = mysqli_query($conn, $insert_query);
 
     mysqli_close($conn);
-    header("Location: http://100.119.133.29/index.php?success=1");
+    header("Location: http://localhost/index.php?success=1");
     exit();
 } else {
     // If accessed directly without POST, redirect to index
-    header("Location: http://100.119.133.29/index.php");
+    header("Location: http://localhost/index.php");
     exit();
 }
 
