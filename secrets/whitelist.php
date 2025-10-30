@@ -28,9 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             array_push($amp_cert, $new_id);
             // Save to file
             file_put_contents($file_path, json_encode($amp_cert, JSON_PRETTY_PRINT));
-            header("Location: http://100.119.133.29/entries.php?success=1");
+            header("Location: http://localhost/entries.php?success=1");
         } else {
-            header("Location: http://100.119.133.29/entries.php?error=3"); // ID already exists
+            header("Location: http://localhost/entries.php?error=3"); // ID already exists
             exit;
         }
 
@@ -42,13 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $amp_cert = array_values($amp_cert);
             // Save to file
             file_put_contents($file_path, json_encode($amp_cert, JSON_PRETTY_PRINT));
-            header("Location: http://100.119.133.29/entries.php?success=2");
+            header("Location: http://localhost/entries.php?success=2");
         } else {
-            header("Location: http://100.119.133.29/entries.php?error=2");
+            header("Location: http://localhost/entries.php?error=2");
             exit;
         }
     } else {
-        header("Location: http://100.119.133.29/entries.php?error=1");
+        header("Location: http://localhost/entries.php?error=1");
         exit;
     }
 }
