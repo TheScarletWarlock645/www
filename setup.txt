@@ -1,0 +1,11 @@
+install mariadb, apache2, phpmyadmin
+
+make sure db is named guitar_twenty_five and the tables are gear_checkout and gear_return
+
+manually change all instances of 100.119.133.29 to localhost
+
+all usernames and passwords should be gtrtech and guitar4ever! respectivley
+
+change ownership of /var/www/secrets to www-data
+
+setup in kiosk mode
